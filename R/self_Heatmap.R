@@ -64,6 +64,20 @@ matrix_normalize <- function(matrix_input){
   return(outmatrix)
 }
 
+nameselct <- function(orgnamelist,targetnamelist){
+  outlist <- c()
+  for (name in orgnamelist){
+    name <- strsplit(name,"_")[[1]][2]
+    if (name %in% targetnamelist){
+      outlist <- c(outlist,name)
+    }
+    else{
+      outlist <- c(outlist,"")
+    }
+  }
+  return(outlist)
+}
+
 
 
 
