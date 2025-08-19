@@ -1,3 +1,23 @@
+#' Point plot for myself
+#' @title self_PointPlot
+#' @description made by ZJRen 2021,7,23
+#' @details input:adata output:Point
+#'
+#' @param adata adata is list
+#' @param xlab ylab is str
+#' @param main main is str
+#' @param collist collist is atrray
+#'
+#' @import graphics
+#'
+#' @return a figure
+#' @export
+#' @examples a <- rnorm(n=100,mean = 0,sd=3);b <- rnorm(n=100,mean = 3,sd=3)
+#' @examples adata <- list(a=a,b=b)
+#' @examples self_cdfplot(adata = adata,collist = c("red","green"),main="",xlab="")
+#'
+
+
 pdf(file = "Volcano_Total_42_PointPlot.pdf",height = 5,width = 4.25)
 par(bty="l")
 plot(x = subdata1$log2FoldChange,
