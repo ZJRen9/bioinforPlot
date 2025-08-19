@@ -20,7 +20,6 @@
 selfVolcanoPlot <- function(adata,main,collist){
      updata <- adata[adata$pvalue<=0.01 & adata$log2FoldChange>0,]
      dodata <- adata[adata$pvalue<=0.01 & adata$log2FoldChange<0,]
-     pdf(file = "Volcano_Total_42_PointPlot.pdf",height = 5,width = 4.25)
      par(bty="l")
      plot(x = adata$log2FoldChange,
           y = -log10(adata$pvalue),
@@ -48,7 +47,7 @@ selfVolcanoPlot <- function(adata,main,collist){
            )
 
      legend("topleft",c("Unchange genes","Up-regulated genes","Down-regulated genes"),pch=19,col = collist,bty="n")
-     text(x=-1.5,y=2,labels = length(dodata$names),col="gray41",cex=1.2,pos=3)
-     text(x= 1.5,y=2,labels = length(updata$names),col="gray41",cex=1.2,pos=3)
+     text(x=-1.5,y=2,labels = length(dodata$names),col="gray41",cex=1.5,pos=3)
+     text(x= 1.5,y=2,labels = length(updata$names),col="gray41",cex=1.5,pos=3)
      dev.off()
 }
